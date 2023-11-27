@@ -7,7 +7,7 @@ const {
     updateAddress,
     compareAddress
 } = require ('../controllers/addressController')
-const requireAuth = require('../middleware/requireauth')
+const requireAuth = require('../middleware/requireAuth')
 
 const router = express.Router()
 
