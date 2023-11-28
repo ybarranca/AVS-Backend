@@ -1,5 +1,5 @@
 require('dotenv').config()
-
+const cors = require('cors');
 const express = require('express')
 const mongoose = require('mongoose')
 const addressRoutes = require('./routes/addresses')
@@ -8,7 +8,12 @@ const userRoutes = require('./routes/user')
 // express app 
 const app = express()
 
-// middleware
+// CORS middleware
+app.use(cors({
+    origin: 'https://avsksu.netlify.app'
+  }));
+  
+// JSON parsing middleware
 app.use(express.json())
 
 app.use((req, res, next) => {
