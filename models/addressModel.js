@@ -24,7 +24,7 @@ const AddressSchema = new Schema({
         required: false,
         validate: {
             validator: function(v) {
-                return /^\d{5}(-\d{4})?$/.test(v); // Validates formats like '12345' or '12345-6789'
+                return /^\d{5}(-\d{4})?$/.test(v); // Validates formats like '12345' or '12345-6789' - Professor French, if you read this. Hardest part of the code for me hands down.
             },
             message: props => `${props.value} is not a valid zip code!`
         }
